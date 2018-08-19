@@ -15,10 +15,10 @@ public class Basket {
     }
 
 
-    public int calculate() {
+    public int totalCost() {
         int costTotal = 0;
         for (Item item : itemList) {
-            costTotal += item.getQuantity() * item.getArticle().getCost();
+            costTotal += item.cost();
         }
         return costTotal;
     }

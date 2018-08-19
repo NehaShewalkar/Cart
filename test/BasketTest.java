@@ -29,7 +29,7 @@ public class BasketTest {
         Item itemApple = new Item(apple, 3);
         List<Item> itemList= Arrays.asList(itemBanana,itemApple);
         Basket basket=new Basket(itemList);
-        assertEquals(80,basket.calculate());
+        assertEquals(80,basket.totalCost());
     }
 
     @Test
@@ -38,7 +38,7 @@ public class BasketTest {
         Item itemGrapes = new Item(grapes, 3);
         List<Item> itemList= Arrays.asList(itemGrapes);
         Basket basket=new Basket(itemList);
-        assertEquals(90,basket.calculate());
+        assertEquals(90,basket.totalCost());
     }
 
     @Test(expected = NegativeValueException.class)
@@ -47,6 +47,6 @@ public class BasketTest {
         Item itemGrapes = new Item(grapes, -3);
         List<Item> itemList= Arrays.asList(itemGrapes);
         Basket basket=new Basket(itemList);
-        assertEquals(90,basket.calculate());
+        assertEquals(90,basket.totalCost());
     }
 }

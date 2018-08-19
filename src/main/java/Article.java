@@ -1,8 +1,6 @@
 package main.java;
 
 public class Article {
-
-
     private String articleName;
     private int cost;
 
@@ -12,7 +10,6 @@ public class Article {
             throw new NegativeValueException("Negative cost");
         }
         this.cost = cost;
-
     }
 
     public String getArticleName() {

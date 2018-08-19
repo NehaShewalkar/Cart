@@ -20,4 +20,8 @@ public class Item {
     public int getQuantity() {
         return quantity;
     }
+
+    public int cost() {
+        return quantity * article.getCost();
+    }
 }

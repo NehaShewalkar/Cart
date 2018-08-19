@@ -23,5 +23,13 @@ public class ItemTest {
         Item item = new Item(article, quantity);
     }
 
+    @Test
+    public void shouldReturnCostOfItem() throws Exception {
+        Article article = new Article("Banana", 10);
+        int quantity = 2;
+        Item item = new Item(article, quantity);
+        assertEquals(20, item.cost());
+    }
+
 
 }
